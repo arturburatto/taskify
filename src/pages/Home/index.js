@@ -22,6 +22,8 @@ function Home(){
               console.log(e)
               if(e == 'FirebaseError: Firebase: Error (auth/wrong-password).'){
                 toast.warn('Usuário e/ou senha incorretos!')
+              } else if(e == 'FirebaseError: Firebase: Error (auth/user-not-found).'){
+                toast.warn('Usuário não cadastrado')
               }
             })
         }else{
